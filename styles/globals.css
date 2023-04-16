@@ -1,0 +1,56 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.rdrDefinedRangesWrapper,
+.rdrDateDisplayWrapper {
+  display: none;
+}
+
+.rdrDateRangePickerWrapper {
+  box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  border: 1px solid #e0e0e0;
+  right: 0;
+  top: 105%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.rdrDateRangePickerWrapper .rdrMonth {
+  width: 22em;
+  padding-bottom: 3px;
+}
+.rdrDateRangePickerWrapper .rdrDay {
+  height: 2em;
+}
+
+.rdrDateRangePickerWrapper .rdrMonthAndYearWrapper {
+  padding-top: 0;
+}
+
+.rdrDateRangePickerWrapper .rdrDayToday .rdrDayNumber span:after {
+  width: 0;
+  height: 0;
+}
+
+.rdrDateRangePickerWrapper .rdrSelected,
+.rdrDateRangePickerWrapper .rdrInRange,
+.rdrDateRangePickerWrapper .rdrStartEdge,
+.rdrDateRangePickerWrapper .rdrEndEdge {
+  top: 2px;
+  bottom: 2px;
+}

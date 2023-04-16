@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+    cs-payments:
+        container_name: cs-payments
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: cs-payments:local
+        restart: always
+        ports:
+            - 3000:3000
+

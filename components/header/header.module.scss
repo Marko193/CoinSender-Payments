@@ -1,0 +1,252 @@
+@import '@/styles/colors';
+@import '@/styles/mixins';
+@import '@/styles/variables';
+
+.headerContainer {
+  height: 70px;
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
+
+  .headerItems {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100%;
+    padding: 0 24px;
+    margin: 0 auto;
+
+    max-width: $main-content-width;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      padding: 16px;
+      //padding: 0 24px 0 24px;
+    }
+
+    @media screen and (max-width: 580px) {
+      align-items: start;
+    }
+
+    div {
+      img {
+        height: 50px;
+        object-fit: cover;
+        width: 190px;
+      }
+    }
+
+    .wallet {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+
+      @media screen and (max-width: 580px) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 30px;
+        margin-right: 16px;
+      }
+
+      .button {
+        padding: 10px 16px;
+
+        font-weight: 700;
+        font-size: 12px;
+
+        background: $color-main;
+        color: white;
+
+        border: none;
+        border-radius: 8px;
+
+        cursor: pointer;
+
+        @include media-screen(xs) {
+          & {
+            padding: 10px 12px;
+            font-size: 10px;
+          }
+        }
+
+        @include media-screen(sm) {
+          & {
+            padding: 10px 16px;
+
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .mobile_wrapper {
+    //background-color: red;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 580px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    @media screen and (min-width: 501px) and (max-width: 768px) {
+      margin-top: 20px;
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1200px) {
+      //margin-left: 25px;
+    }
+
+    @media screen and (min-width: 1201px) {
+      margin-left: 150px;
+    }
+  }
+
+  .items_list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @media screen and (max-width: 480px) {
+      gap: 14px;
+    }
+
+    @media screen and (max-width: 580px) {
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+      gap: 20px;
+    }
+
+
+    @media screen and (min-width: 769px) and (max-width: 1200px) {
+      gap: 15px;
+      margin: 0 auto;
+    }
+
+    @media screen and (min-width: 1200px) {
+      gap: 50px;
+
+    }
+  }
+
+  .item_block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media screen and (max-width: 580px) {
+      //align-items: center;
+    }
+  }
+
+  .item_block_active {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    :hover {
+      cursor: pointer;
+    }
+  }
+
+  .coming_soon_label {
+    font-size: 9px;
+    color: #007994;;
+    border-radius: 3px;
+    font-weight: 700;
+
+    @media screen and (max-width: 480px){
+      font-size: 7px;
+    }
+  }
+
+  .select {
+    font-size: 16px;
+
+    @media screen and (max-width: 480px) {
+      font-size: 14px;
+    }
+  }
+
+  .coming_soon_label_empty {
+    padding: 3px 3px 0 3px;
+    height: 16px;
+    font-size: 9px;
+    background: transparent;
+    border-radius: 3px;
+    font-weight: 700;
+
+    @media screen and (max-width: 580px) {
+      display: none;
+    }
+  }
+
+  .active_tab {
+    font-size: 16px;
+
+    @media screen and (max-width: 480px) {
+      font-size: 14px;
+    }
+  }
+
+  .active_tab:hover {
+    cursor: pointer;
+  }
+
+  .coming_soon_tab {
+    color: #999999;
+    font-size: 16px;
+
+    @media screen and (max-width: 480px){
+      font-size: 14px;
+    }
+  }
+
+  @include box-shadow();
+
+  .exit_icon {
+    width: 33px;
+    height: 33px;
+  }
+}
+
+.menu_item {
+  font-family: '__Inter_01180f, __Inter_Fallback_01180f', sans-serif !important;
+}
+
+.menu_item:hover {
+  font-weight: bold !important;
+}
+
+#not_using_label {
+  @media screen and (max-width: 480px){
+    font-size: 6px;
+  }
+}
+
+.selectedTab {
+  color: red;
+  font-weight: bold;
+}

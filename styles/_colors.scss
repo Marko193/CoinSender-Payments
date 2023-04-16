@@ -1,0 +1,20 @@
+$color-primary: #06ffff;
+$color-primary-light: #a1ffff;
+$color-primary-lighter: #00f3f324;
+$color-turquoise: #00d8d8;
+$color-turquoise-light: #c6efff;
+$color-main: #007994;
+
+$gradient-primary: radial-gradient(
+  circle farthest-corner at 10% 20%,
+  #a1ffff 11.3%,
+  #06ffff 41.2%,
+  #00d8d8 77.8%
+);
+$gradient-dark: radial-gradient(
+    50% 50% at 50% 0,
+    rgba(0, 243, 243, 0.141) 0,
+    transparent 100%
+  ),
+  radial-gradient(75% 75% at 50% 50%, #0b1127 0, #070a1c 100%);
+$gradient-text: linear-gradient(135deg, #0b1127 0%, #284962 33%, #070a1c 66%);

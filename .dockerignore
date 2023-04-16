@@ -1,0 +1,7 @@
+**/node_modules/
+**/.git
+**/.github
+docker-compose.yaml
+Dockerfile
+README.md
+.gitignore

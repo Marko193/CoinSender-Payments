@@ -1,0 +1,26 @@
+// Mobile first approche is implemented
+$media: (
+  xs: 320px,
+  sm: 640px,
+  md: 768px,
+  lg: 1200px,
+  xl: 1400px,
+  2xl: 1536px,
+  3xl: 1920px,
+);
+
+@mixin media-screen($breakpoint) {
+  @each $breakpoints, $size in $media {
+    @if $breakpoint==$breakpoints {
+      @media screen and (min-width: $size) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin box-shadow() {
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+}
